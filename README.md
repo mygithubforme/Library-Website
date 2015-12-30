@@ -1,8 +1,7 @@
 # Library-Website
 This is library management web application developed in C#.Net 
 
-	•	Library Automation Software as an undergraduate project using RFID 
-Technology.
+	•	Library Automation Software as an undergraduate project using RFID Technology.
 
  I have developed Library Automation System with RFID technology (Web application) as an undergrad project with my other two friends.
  Various operations carried out in library uses RFID reader and tag. An application hold the database of books and provide 
