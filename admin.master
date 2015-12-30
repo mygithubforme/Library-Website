@@ -1,0 +1,207 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="Stylesheet" type="text/css" href="App_Themes/Theme1/CSS/admin Css.css"/>
+    
+
+   <style type="text/CSS">
+body {
+
+  margin:0px 0px 0px 0px;
+}
+
+nav{
+	height:100px;
+	width:100%;
+	background-color:black;
+	text-align: right;
+}
+ul {
+	position:relative;
+    top:51px;
+  display: inline;
+  margin: 0;
+  list-style: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color:White;
+  font-family:Century Gothic;
+  z-index:50;
+}
+ul li {
+  display: inline-block;
+  position: relative;
+  padding: 15px 20px;
+  background: 000;
+  color:#fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+ul li:hover {
+  background: aqua;
+  color: Black;
+}
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 175px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0.85;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+  text-align: left;
+  font-size:15px;
+
+}
+ul li ul li { 
+  background: #555; 
+  display: block; 
+  color: #fff;
+  
+}
+ul li ul li:hover { background:aqua;
+                    color:Black ;
+                    }
+ul li:hover ul {
+  display: block;
+  opacity:0.8;
+  visibility: visible;
+}
+a {
+	text-decoration: none;
+}
+ul li ul li.selected a   
+{
+    background:aqua;
+    color:Black;
+    }
+    
+#home #nav-home a,
+#about #nav-about a,
+#archive #nav-archive a,
+#lab #nav-lab a,
+#reviews #nav-reviews a,
+#contact #nav-contact a {
+
+}
+    
+h1{
+   background:-webkit-repeating-linear-gradient(-45deg, rgb(43, 118, 129) , rgb(34, 123, 136) 20px, rgb(35, 123, 136) 20px, rgb(41, 121, 133) 40px, rgb(38, 116, 128) 40px);
+    -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+    margin-left:100px;	
+	font-family:Calibri;
+}
+h1:after
+{
+    margin-left:-90px;
+	content: ' ';
+	display: block;
+	width: 35%;
+	height: 2px;
+	margin-top: 10px;
+	background: -moz-linear-gradient(left, rgba(147,184,189,0) 0%, rgba(147,184,189,0.8) 20%, rgba(147,184,189,1) 53%, rgba(147,184,189,0.8) 79%, rgba(147,184,189,0) 100%); 
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(147,184,189,0)), color-stop(20%,rgba(147,184,189,0.8)), color-stop(53%,rgba(147,184,189,1)), color-stop(79%,rgba(147,184,189,0.8)), color-stop(100%,rgba(147,184,189,0))); 
+	background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+	background: -o-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+	background: -ms-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+	background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+}
+</style>
+
+
+</head>
+<body style="background-image: url('Images/admin_bg.gif');background-repeat:repeat;">
+
+    
+<div id="wrapper">
+<form id="form1" runat="server">
+<nav>
+<ul>
+    <li>Add/Remove
+       <ul>
+        <a href="adm_addstu.aspx"><li>Add Student</li></a>
+        <a href="adm_addfac.aspx"><li>Add Faculty</li></a>
+        <a href="adm_rmvstu.aspx"><li>Remove Student</li></a>
+        <a href="adm_rmvfac.aspx"><li>Remove Faculty</li></a>
+       </ul> 
+
+    </li>
+  <li>Reports
+       <ul>
+           <a href="adm_issue.aspx"><li>Issue Report</li></a>
+           <a href="adm_return.aspx"><li>Return Report</li></a>
+           <a href="adm_fine.aspx"><li>Fine Report</li></a>
+
+        </ul>
+  </li>
+  <li>
+    Search
+    <ul>
+     <a href="adm_bs.aspx"><li>Book Search</li></a>
+     <a href="adm_ss.aspx"><li>Student Search</li></a>
+     <a href="adm_fs.aspx"><li>Faculty Search</li></a>
+     <a href="#"><li>Supplier Search</li></a>
+    </ul>
+  </li>
+  <a href="adm_notify.aspx"><li>Notifify</li></a>
+  <li>Setting
+       <ul>
+      <a href="adm_cpwd.aspx"><li>Change Password</li></a>
+      <a href="adm_loan.aspx"><li>Change Loan Period</li></a>
+       <a href="adm_issuelimit.aspx"><li>Change Book Issue Limit</li></a>
+        <a href="adm_chng_emailID.aspx"><li>Change Sender Email ID</li></a>
+        <a href="adm_clear_fine.aspx"><li>Clear Fine</li></a>
+    </ul>
+  </li>
+   <a href="adm_suggestion.aspx"><li>Suggestion</li></a>
+   <a href="search.aspx"><li>Log Out</li></a>
+</ul>
+
+</nav>  
+
+    <div style="position:absolute; top:20px; left:30px; font-family:Century Gothic; font-size:60px; color:White">
+        ADIT 
+    </div>
+    <div style="position:absolute; top:20px; left:175px; font-family:Century Gothic; font-size:60px; color:Aqua">
+        Library
+    </div>
+   
+    <div id="contain" >
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    
+                    </asp:ContentPlaceHolder>
+    <br /></div>
+</form>
+    </div>
+    <div id="footer">
+              <div style="position:relative; top:15px; text-align:center;">
+              <a href="#" style="color:Black; font-family:Century Gothic"> Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#" style="color:Black;font-family:Century Gothic"> About Us</a>
+              </div> 
+    </div>
+
+    
+
+</body>
+</html>

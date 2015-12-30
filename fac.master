@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="fac.master.cs" Inherits="fac" %>
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+ <link rel="Stylesheet" type="text/css" href="App_Themes\Theme1\CSS\facultyCss.css"/>
+
+
+</head>
+<body style="background: url('Images/bgnoise_lg.png');" >
+    <form id="form1" runat="server">
+    
+    <div id="hed" style="background-color:#313640;width:100%; height:100px; ">
+        <div class="fonthead">
+            ADIT 
+            </div>
+            <div class="fonthead2">
+            Library
+            </div>
+            </div>
+             <div id="user-icon" style="font-family:Calibri;font-size:18px;color:White;position:absolute;top:65px;right:100px;"> 
+                <asp:Label ID="Label2" runat="server" Text="Label" ForeColor="White" font-size="20px">
+                    <span class="glyphicon glyphicon-user"></span></asp:Label>&nbsp&nbsp&nbsp<asp:Label ID="Label8"
+                        runat="server" Text="Label"></asp:Label>
+            </div>
+        
+    <div >
+                        <a href="fac_search.aspx" > 
+                                <img  src="Images/box1.png" class="box1 rot " style="height:150px; width:150px" />
+                                <asp:Label ID="Label1" runat="server" Text="Search" CssClass="lab1"></asp:Label>         
+                         </a>
+
+                        <a href="fac_issue.aspx">       
+                                <img  src="Images/box2.png" class="box2 rot" style="height:150px; width:150px"/>
+                                <asp:Label ID="Label7" runat="server" Text="Book Report" CssClass="lab2"></asp:Label>
+                        </a>
+     
+
+                        <a href="?id=1">
+                                <img  src="Images/box3.png" class="box3 rot" style="height:150px; width:150px"/>
+                                <asp:Label ID="Label3" runat="server" Text="Sign out" CssClass="lab3"></asp:Label>
+                        </a>
+    
+    </div>
+    
+    
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+
+
+    <div >
+        <a href="aboutus.aspx">
+                                <img src="Images/box4.png" class="box4 rot " style="height:150px; width:150px" />
+                                <asp:Label ID="Label4" runat="server" Text="About Us" CssClass="lab4"></asp:Label>
+        </a>
+        <a href="contact.aspx">
+                                <img src="Images/box6.png" class="box5 rot" style="height:150px; width:150px"/>
+                                <asp:Label ID="Label5" runat="server" Text="Contact Us" CssClass="lab5"></asp:Label>
+        </a>
+        <a href="fac_sugge.aspx" >
+                                <img src="Images/box5.png" class="box6 rot" style="height:150px; width:150px"/>
+                                <asp:Label ID="Label6" runat="server" Text="Suggestions" CssClass="lab6"></asp:Label>
+        </a>
+    </div>
+
+    </form>
+</body>
+</html>
+
+

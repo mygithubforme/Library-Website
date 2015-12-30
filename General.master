@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="General.master.cs" Inherits="General" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <link rel="Stylesheet" type="text/css" href="App_Themes\Theme1\CSS\generalCss.css"/>
+ 
+
+</head>
+<body style="background: url('Images/bgnoise_lg.png');" >
+    <form id="form1" runat="server">
+
+
+    <div style="background-color:#313640;height:100px;width:100%">
+        <div class="fonthead">
+            ADIT 
+            </div>
+            <div class="fonthead2">
+            Library
+            </div>
+    </div>
+ 
+     <div >
+         <a href="search.aspx"> 
+                                <img  src="Images/box1.png" class="box1 rot " style="height:150px; width:150px" />
+                                <asp:Label ID="Label1" runat="server" Text="Search" CssClass="lab1"></asp:Label>         
+         </a>
+
+         <a href="login.aspx">
+                                <img  src="Images/box2.png" class="box2 rot" style="height:150px; width:150px"/>
+                                <asp:Label ID="Label2" runat="server" Text="Log In" CssClass="lab2"></asp:Label>
+         </a>
+
+         <ul>
+                                
+                              <div id="menu"> 
+                              
+                                <li style="list-style-type:none">
+                                    <asp:Label ID="Label3" runat="server" Text="Signup" CssClass="lab3"></asp:Label>
+
+                                <ul>
+                                        <li><a href="student_sign.aspx" style="color:White">Student</a></li>
+                                        <li><a href="faculty_sign.aspx" style="color:White">Faculty</a></li>
+                                       
+                                    </ul>
+                                    <img  src="Images/box3.png" class="box3 rot" style="height:150px; width:150px"/>
+                                    </li>
+                              </div>
+         
+     </ul>
+          
+    </div>
+    
+    
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+
+
+    <div >
+        <a href="aboutus.aspx">
+                                <img src="Images/box4.png" class="box4 rot " style="height:150px; width:150px" />
+                                <asp:Label ID="Label4" runat="server" Text="About Us" CssClass="lab4"></asp:Label>
+        </a>
+        <a href="contact.aspx">
+                                <img src="Images/box6.png" class="box5 rot" style="height:150px; width:150px"/>
+                                <asp:Label ID="Label5" runat="server" Text="Contact Us" CssClass="lab5"></asp:Label>
+        </a>
+        <a href="suggestion.aspx">
+                                <img src="Images/box5.png" class="box6 rot" style="height:150px; width:150px"/>
+                                <asp:Label ID="Label6" runat="server" Text="Suggestions" CssClass="lab6"></asp:Label>
+        </a>
+    </div>
+
+ </form>
+</body>
+</html>
